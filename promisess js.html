@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function placeorder(){
+        //     return new Promise((resolve,reject)=>{
+        //         orderstatus=true
+        //         if(true){
+                    
+        //             resolve("orderstatues success")
+        //         }else{
+                    
+        //             reject("failed")
+        //         }
+
+        //     });
+        // }
+        // placeorder()
+        // .then((order)=>{
+        //     console.log(order)
+        // })
+        // .catch((data)=>{
+        //     console.log(data)
+        // });
+        
+        // let payment=new Promise((resolve,reject)=>{
+        //     let paymentstatus=true
+        //     if(true){
+        //         resolve("payment success")
+        //     }else{
+        //         reject("failed")
+        //     }
+        // });
+        // Promise
+        // .then((data)=>{
+        //     console.log(data)
+        // }) 
+        // .catch((error)=>{
+        //     console.log(error)
+        // })  
+        let paymentstatus = true;
+
+let payment = new Promise((resolve, reject) => {
+    if (paymentstatus) {
+        resolve("Payment successful!");
+    } else {
+        reject("Payment failed!");
+    }
+});
+
+payment
+    .then((data) => {
+        console.log(data);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+       
+        
+    </script>
+</body>
+</html>
+
+
