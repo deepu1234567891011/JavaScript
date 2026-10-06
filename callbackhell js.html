@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function orderFood(callback){
+            console.log("order placed.....!!")
+            setTimeout(()=>{
+                console.log("Food prepared!!")
+                callback()
+            },1000)
+        }
+        function packedFood(callback){
+            console.log("waiting for pickup....")
+            setTimeout(()=>{
+                console.log("Food packedup")
+                callback()
+
+            },1000)
+
+        }
+        function assignDelivery(callback){
+            console.log("food is assigned...")
+            setTimeout(()=>{
+                console.log("delivery partner assigned")
+                callback()
+            },1000)
+        }
+        function pickupFood(callback){
+            console.log("out for delivery...")
+            setTimeout(()=>{
+                console.log("Food packed up")
+                callback()
+            },1000)
+        }
+        function deliveryFood(callback){
+            console.log("out for delivery!!")
+            setTimeout(()=>{
+                console.log("Food delivery!!")
+                callback()
+            },1000)
+        }
+        
+        orderFood(function(){
+            packedFood(function(){
+                assignDelivery(function(){ 
+                    pickupFood(function(){
+                        deliveryFood(function(){
+                            console.log("order completed successfully")
+                        });
+
+                    });
+                });
+
+
+            });
+        });
+            
+
+
+
+                    
+        
+                    
+        
+
+            
+        
+        
+        
+    </script>
+</body>
+</html>
